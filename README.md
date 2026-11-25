@@ -1,6 +1,6 @@
 # Leader-Max Smart Stall Planner
 
-**README body word count** — 1,126 words
+**README body word count** — 1,099 words
 
 Leader-Max is a web prototype for first-time market traders. It uses a crystal stall in Birmingham to explore two questions: which market fits the trader’s plans, and how does each sale affect the stall?
 
@@ -38,8 +38,11 @@ Open `http://localhost:4173/` in your browser. Use the links on the home page to
 - `map/README.md`: data status, map services and source references.
 - `luna-crystal-stall.png`, `vedio.mp4`: existing Home media.
 - [System logic](docs/system-logic.md) — How market matches are calculated and how a simulated sale updates stock and revenue.
-- [Early design portfolio](docs/design-origins/README.md)
 - [Project credits](CREDITS.md) — Sources for the Birmingham map, postcode lookup and walking routes, plus credits for the crystal collection artwork.
+
+## Design portfolio for assessment
+
+The early Leader-Max design portfolio is provided separately for assessment. Reviewers can consult `Leader-Max-Design-Portfolio.zip` alongside the Canvas report for the original field research, user journey and early design concepts. The web prototype can be run and reviewed using the files in this repository alone.
 
 ## Prototype features and data
 
@@ -64,14 +67,12 @@ The prototype uses HTML, CSS and JavaScript. The browser applies the venue-match
 
 ## Development record
 
-- **From an early concept to a working map.** Board 10 of the original portfolio shows a Wuhan market with an 86% suitability score. In the Birmingham web prototype, the Match tab shows which conditions a venue meets. In a browser check, lowering the budget from £50 to £20 changed the result for Jewellery Quarter’s £45 example fee from *within limit* to *above limit*. Its distance and time results stayed the same.
+- **From an early concept to a working map.** In the Birmingham web prototype, the Match tab shows which conditions a venue meets. In a browser check, lowering the budget from £50 to £20 changed the result for Jewellery Quarter’s £45 example fee from *within limit* to *above limit*. Its distance and time results stayed the same.
 - **From a dashboard prompt to a trading session.** In the early home prototype, selecting **View dashboard** displayed a message about a planned page. The button now opens a 60-second trading simulation. In a browser check, adding the first £15 bracelet order raised revenue from £120 to £135 and reduced its stock from 16 to 15. The order count increased from eight to nine.
 
 ## Design decisions and AI assistance
 
 I narrowed Leader-Max to two tasks for a first-time crystal trader in Birmingham. Before trading, the user compares markets by budget, distance and available trading times, reviews the reasons for each match, and chooses a location. During a simulated session, the user can follow a single order and see how it changes revenue, the order count and remaining stock.
-
-I included all ten boards from my original portfolio to show how observations and interviews with street vendors informed the early service concept. The boards also trace the vendor’s journey from preparing a stall to reviewing a day’s sales. The Birmingham prototype takes two moments from that journey and makes them interactive.
 
 ChatGPT generated the nine crystal garden illustrations and the cabinet background. The running prototype uses rule-based market matching.
 
