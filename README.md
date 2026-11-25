@@ -1,6 +1,6 @@
 # Leader-Max Smart Stall Planner
 
-**README body word count** — 1,099 words
+**README body word count** — 1,163 words
 
 Leader-Max is a web prototype for first-time market traders. It uses a crystal stall in Birmingham to explore two questions: which market fits the trader’s plans, and how does each sale affect the stall?
 
@@ -42,7 +42,7 @@ Open `http://localhost:4173/` in your browser. Use the links on the home page to
 
 ## Design portfolio for assessment
 
-The early Leader-Max design portfolio is provided separately for assessment. Reviewers can consult `Leader-Max-Design-Portfolio.zip` alongside the Canvas report for the original field research, user journey and early design concepts. The web prototype can be run and reviewed using the files in this repository alone.
+The original Leader-Max design portfolio is excluded from this repository and will be submitted separately as `Leader-Max-Design-Portfolio.zip` with the Canvas project report. The ZIP contains the original field research, user journey and early design concepts. The web prototype can be run and reviewed using the files in this repository alone.
 
 ## Prototype features and data
 
