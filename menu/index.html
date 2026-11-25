@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b15">
+  <title>Crystal Collection · Leader-Max</title>
+  <!-- The midnight cabinet, aligned crystals and contact shadows are styled in style.css. -->
+  <link rel="stylesheet" href="./style.css?v=crystal-night-sky-16">
+</head>
+<body>
+  <main class="canvas" aria-label="Crystal collection prototype">
+    <div class="night-sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <header class="menu-header">
+      <a class="brand" href="../index.html" aria-label="Leader-Max, back to home"><span class="brand-word">Leader<span class="brand-dash">-</span>Max</span><span class="brand-spark" aria-hidden="true">✦</span></a>
+      <a class="home-link" href="../index.html"><span class="home-arrow" aria-hidden="true">←</span><span>Home</span></a>
+    </header>
+    <div class="wall-lamp" aria-hidden="true"><span class="lamp-glow"></span><span class="lamp-beam"></span><span class="lamp-sparkles"><i></i><i></i><i></i><i></i><i></i></span><img class="lamp-image" src="./images/rose-lilac-flower-sconce.png" alt=""></div>
+    <section class="slider-space" aria-label="Crystal garden slider">
+      <div class="display-title"><span class="display-title-script">Crystal Reverie</span><span class="display-title-copy">A LITTLE COLLECTION OF CRYSTAL GARDENS</span></div>
+      <div class="slider-frame" id="crystal-slider" role="slider" tabindex="0" aria-label="Explore the crystal gardens" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" aria-valuetext="Moonlit Clarity, 0 of 9 illuminated">
+        <!-- Raised midnight cabinet background. -->
+        <div class="shelf-atmosphere" aria-hidden="true"></div>
+        <div class="shelf-dim" aria-hidden="true"></div>
+        <!-- Nine crystal gardens and their contact shadows. -->
+        <div class="shelf" aria-hidden="true">
+          <div class="piece current">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/01-white-quartz-pedestal.png" alt="" draggable="false">
+          </div>
+          <div class="piece">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/02-golden-quartz-wood-bowl.png" alt="" draggable="false">
+          </div>
+          <div class="piece">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/03-mint-rose-stone-bowl.png" alt="" draggable="false">
+          </div>
+          <div class="piece">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/04-rose-quartz-pedestal.png" alt="" draggable="false">
+          </div>
+          <div class="piece">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/05-white-citrine-pedestal.png" alt="" draggable="false">
+          </div>
+          <div class="piece">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/06-amethyst-lavender-bowl.png" alt="" draggable="false">
+          </div>
+          <div class="piece">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/07-smoky-quartz-floral-cup.png" alt="" draggable="false">
+          </div>
+          <div class="piece">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/08-rose-quartz-floral-cup.png" alt="" draggable="false">
+          </div>
+          <div class="piece">
+            <span class="contact-shadow"></span>
+            <img src="../assets/menu/crystal-planters/cutouts/09-pink-lavender-stone-bowl.png" alt="" draggable="false">
+          </div>
+        </div>
+        <div class="snowfall" aria-hidden="true"></div><div class="snow-bank" aria-hidden="true"></div>
+        <span class="glass-lens" aria-hidden="true"><span class="glass-shine"></span></span>
+      </div>
+      <div class="display-details">
+        <div class="sales-marker" aria-live="polite"><span class="sales-number" id="sales-number">24</span><span class="sales-label">PIECES SOLD</span><span class="sales-example">EXAMPLE DATA</span></div>
+        <div class="product-story" aria-live="polite"><h1 id="product-name">Moonlit Clarity</h1><p id="product-meaning">A quiet garden of white quartz, inspired by fresh beginnings and a little space to breathe.</p></div>
+      </div>
+      <button class="sound-toggle" id="sound-toggle" type="button" aria-label="Mute background music and sound effects" aria-pressed="true" title="Mute music and sounds"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4Zm12-1a4 4 0 0 1 0 6m2-9a8 8 0 0 1 0 12"/></svg><span class="mute-mark" aria-hidden="true"></span></button>
+      <button class="reset" id="reset" type="button" aria-label="Reset the crystal slider" title="Reset"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 10a7.7 7.7 0 1 1 1.2 5.4M4.5 4.7V10h5.3"/></svg></button>
+      <span id="slider-announcement" class="sr-only" aria-live="polite"></span>
+    </section>
+    <div class="theme-switch" role="group" aria-label="Display lighting"><button type="button" data-theme="day" aria-pressed="false">☼ <span>Day</span></button><button type="button" data-theme="night" aria-pressed="true">☾ <span>Night</span></button></div>
+  </main>
+  <audio id="background-music" src="./audio/crystal-breeze.wav" preload="none" loop></audio>
+  <script src="./app.js?v=crystal-night-sky-16"></script>
+</body>
+</html>

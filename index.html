@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Leader-Max: a prototype decision-support interface for new street vendors."
+    />
+    <title>Leader-Max · Smart Stall Planner</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-labelledby="page-title">
+      <div class="prototype-notice">
+        <span>Prototype mode · location, cost and risk information is simulated</span>
+        <span class="micro-schedule">Fri 18:00 · setup &nbsp; Sat 18:00 · trial stall &nbsp; Sun · review</span>
+      </div>
+
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="Leader-Max home">LEADER–MAX</a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a class="nav-link active" href="#home" aria-current="page">Home</a>
+          <a class="nav-link" href="./shop.html">Stall dashboard</a>
+          <a class="nav-link" href="./map/index.html">Location</a>
+          <a class="nav-link" href="./menu/index.html">Menu</a>
+        </nav>
+        <div class="utility-nav" aria-label="Utility tools">
+          <button class="icon-button" data-action="date" aria-label="Choose a vending date" title="Choose date">
+            <span aria-hidden="true">▣</span>
+          </button>
+          <button class="icon-button" data-action="time" aria-label="Choose vending time" title="Choose time">
+            <span aria-hidden="true">◷</span>
+          </button>
+          <button class="icon-button" data-action="saved" aria-label="View saved hot products" title="Saved hot products">
+            <span aria-hidden="true">♡</span><span class="utility-count">2</span>
+          </button>
+          <button class="icon-button" data-action="recommendations" aria-label="View recommended products" title="Recommendations">
+            <span aria-hidden="true">✦</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="home-grid" id="home">
+        <div class="intro-panel">
+          <p class="eyebrow">SMART START FOR STREET VENDORS</p>
+          <h1 id="page-title">Choose<br />your market</h1>
+          <p class="intro-copy">
+            Start with a market that fits your time, budget and appetite for risk.
+            Leader-Max turns your choice into a clear, practical stall plan.
+          </p>
+          <button class="primary-action" id="compare-locations">
+            Compare locations
+          </button>
+          <p class="interaction-note" id="assistant-note" aria-live="polite">
+            Choose a location to see why it fits your plan.
+          </p>
+        </div>
+
+        <section class="stall-stage" aria-label="Stall visual preview">
+          <button class="model-stage" id="model-stage" type="button" aria-label="Stall visual. Click to reveal crystal starlight.">
+            <video class="stall-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+              <source src="./vedio.mp4" type="video/mp4" />
+            </video>
+            <span class="location-chip"><i></i><span id="visual-location">Explore Birmingham</span></span>
+            <span class="model-glow" aria-hidden="true"></span>
+            <span class="model-hint">Stall visual · click for starlight ✦</span>
+          </button>
+        </section>
+
+        <aside class="plan-panel" aria-labelledby="plan-heading">
+          <div class="plan-topline">
+            <div>
+              <p class="eyebrow">MY STALL</p>
+              <h2 id="plan-heading">Luna’s Crystal &amp; Tarot Stall</h2>
+            </div>
+            <button class="text-button" id="view-dashboard">View dashboard</button>
+          </div>
+
+          <dl class="metrics" aria-label="Simulated example estimates for the selected location">
+            <div><dt>Today · demo</dt><dd id="revenue">£120</dd></div>
+            <div><dt>Stall score</dt><dd id="score">84 / 100</dd></div>
+            <div><dt>Footfall</dt><dd id="footfall">Medium</dd></div>
+          </dl>
+
+          <div class="location-heading">
+            <h3>Location selection</h3>
+            <span>3 places to explore</span>
+          </div>
+          <div class="location-list" id="location-list" role="list">
+            <button class="location-card" data-location="jewellery" role="listitem" aria-pressed="false"><span class="location-number">01</span><strong>Jewellery Quarter</strong><small>Artisan market</small><em>Explore</em></button>
+            <button class="location-card" data-location="milk" role="listitem" aria-pressed="false"><span class="location-number">02</span><strong>Milk Street Market</strong><small>Digbeth · independent</small><em>Explore</em></button>
+            <button class="location-card" data-location="alternative" role="listitem" aria-pressed="false"><span class="location-number">03</span><strong>Alternative Artisans</strong><small>Digbeth · event</small><em>Explore</em></button>
+          </div>
+
+          <div class="recommendation" id="recommendation">
+            <span class="recommendation-mark">✦</span>
+            <p><strong>Why this match</strong> Explore the map and compare example venues for your plan.</p>
+          </div>
+          <button class="menu-link" id="open-menu">Open today’s menu</button>
+        </aside>
+      </section>
+
+      <footer class="control-bar">
+        <div class="progress-block" aria-label="Planning progress">
+          <span>My progress</span>
+          <div class="progress-track"><span id="progress-fill"></span></div>
+          <strong id="progress-label">2 / 5 steps</strong>
+        </div>
+        <p class="footer-tagline">Plan with evidence. Start with confidence.</p>
+        <div class="theme-controls" aria-label="Display controls">
+          <button class="mode-button active" data-mode="day" aria-pressed="true">Day</button>
+          <button class="mode-button" data-mode="night" aria-pressed="false">Night</button>
+          <button class="mode-button" id="language-toggle" aria-pressed="false">EN</button>
+        </div>
+      </footer>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

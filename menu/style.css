@@ -1,0 +1,157 @@
+:root{color-scheme:dark}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#0b0810}body{font-family:system-ui,sans-serif;color:#f2e8f6}.canvas{min-height:100dvh;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse 54% 44% at 50% 51%,#291a32 0%,#120c19 56%,#09070c 100%)}.back-home,.reset{display:grid;place-items:center;border:1px solid #ffffff25;border-radius:50%;background:#20152882;color:#d8c6dd;transition:background .2s,border-color .2s}.back-home{position:absolute;top:30px;left:36px;width:42px;height:42px}.back-home:hover,.reset:hover{background:#5a3e66a0;border-color:#e5cef077}.back-home svg,.reset svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.back-home:focus-visible,.reset:focus-visible,.slider-frame:focus-visible{outline:2px solid #f4d8ff;outline-offset:6px}.slider-space{width:min(88vw,1450px);position:relative}.slider-frame{height:clamp(200px,22.5vw,325px);border-radius:999px;position:relative;overflow:hidden;isolation:isolate;cursor:ew-resize;touch-action:pan-y;user-select:none;-webkit-user-select:none;border:2px solid #ad8abbc4;box-shadow:0 0 0 4px #100b15,0 0 0 5px #c5a5d26b,0 18px 80px #000a,inset 0 0 18px #d8b7f227;background:#050307}.slider-frame::before{content:'';position:absolute;inset:5px;z-index:6;border:1px solid #eee2fa30;border-radius:inherit;pointer-events:none}.shelf-atmosphere{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 49% 120%,#67426f66,transparent 58%),radial-gradient(ellipse at 52% 10%,#39274246,transparent 50%),radial-gradient(circle at 8% 30%,#e8ceff8a 0 1px,transparent 2px),radial-gradient(circle at 17% 70%,#ffffffa1 0 1px,transparent 2px),radial-gradient(circle at 31% 26%,#e1b4f38f 0 1px,transparent 2px),radial-gradient(circle at 43% 72%,#d3aee78f 0 1px,transparent 2px),radial-gradient(circle at 56% 19%,#ffffffad 0 1px,transparent 2px),radial-gradient(circle at 72% 74%,#eed6ffaa 0 1px,transparent 2px),radial-gradient(circle at 85% 25%,#ead5fa88 0 1px,transparent 2px),#050307}.shelf-atmosphere::before,.shelf-atmosphere::after{content:'✦';position:absolute;color:#f5d7ff;font-size:9px;text-shadow:0 0 10px #c98cff;opacity:.2;animation:star 7s ease-in-out infinite}.shelf-atmosphere::before{left:34%;top:18%}.shelf-atmosphere::after{left:76%;top:27%;animation-delay:-3s}.shelf{position:absolute;inset:0 3.5%;z-index:1;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));align-items:center}.piece{min-width:0;position:relative;display:grid;place-items:center}.piece img{display:block;width:100%;height:auto;max-height:calc(clamp(200px,22.5vw,325px) - 36px);object-fit:contain;mix-blend-mode:screen;filter:brightness(.32) saturate(.65);opacity:.87;transform:scale(.98);transition:filter .65s,opacity .65s,transform .4s;animation:soft-pulse 6s ease-in-out infinite alternate;-webkit-mask-image:radial-gradient(ellipse 75% 75% at center,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 75% 75% at center,#000 60%,transparent 100%)}.piece:nth-child(3n) img{animation-delay:-2s}.piece:nth-child(3n + 1) img{animation-delay:-4s}.piece.lit img{filter:brightness(1.04) saturate(1.04);opacity:1;animation:none}.piece.current img{filter:brightness(1.18) saturate(1.06) drop-shadow(0 0 9px #eac5fd7a);transform:scale(1.06,1.04)}.piece::after{content:'✦';position:absolute;top:12%;right:18%;color:#f4dcff;font-size:9px;text-shadow:0 0 7px #e9a9ff;opacity:0;animation:star 7s ease-in-out infinite;animation-delay:calc(var(--n) * -1s)}
+.glass-lens{position:absolute;z-index:4;pointer-events:none;left:var(--lens-x,8.65%);top:5%;height:90%;width:clamp(72px,12.2%,184px);transform:translateX(-50%);border-radius:999px;border:1.5px solid #ffffff8c;box-shadow:inset 3px 0 13px #ead7ff22,inset -5px 0 18px #dcb0ff18,0 0 0 1px #100b15a6,0 0 30px #e3b2ef26;background:linear-gradient(100deg,#ffffff16 0%,#ffffff03 28%,#ffffff00 65%,#f2dbff0d 100%);-webkit-backdrop-filter:brightness(1.38) saturate(1.1);backdrop-filter:brightness(1.38) saturate(1.1);will-change:left}.glass-lens::after{content:'';position:absolute;inset:7px 6px;border-radius:inherit;border-left:1px solid #ffffff45;border-right:1px solid #dec1f32d}.glass-shine{position:absolute;left:10%;top:11%;width:27%;height:50%;border-radius:50%;background:linear-gradient(105deg,#ffffff22,transparent 70%);filter:blur(8px)}.slider-frame.dragging .glass-lens{box-shadow:inset 3px 0 13px #ead7ff30,0 0 30px #e3b2ef55}.reset{position:absolute;right:0;bottom:-60px;width:38px;height:38px;cursor:pointer}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@keyframes star{0%,65%,100%{opacity:0;transform:scale(.6)}75%{opacity:.8;transform:scale(1.2)}85%{opacity:0}}@keyframes soft-pulse{from{filter:brightness(.28) saturate(.6)}to{filter:brightness(.39) saturate(.7)}}@media(max-width:700px){.slider-space{width:94vw}.slider-frame{height:clamp(130px,32vw,220px)}.piece img{max-height:calc(clamp(130px,32vw,220px) - 25px)}.glass-lens{width:14%;min-width:44px}.back-home{top:18px;left:18px}.reset{bottom:-54px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+/* Images blend into the shared night sky instead of forming nine dark tiles. */
+.shelf{z-index:auto}
+/* Keep pale quartz readable inside the glass highlight. */
+.piece.current img{filter:brightness(1.04) saturate(1.04) drop-shadow(0 0 9px #eac5fd60)}
+.glass-lens{-webkit-backdrop-filter:brightness(1.13) saturate(1.05);backdrop-filter:brightness(1.13) saturate(1.05)}
+/* The crystal planters have transparent backgrounds; no black image tiles. */
+.piece img{mix-blend-mode:normal;-webkit-mask-image:none;mask-image:none;filter:brightness(.52) saturate(.72);animation:transparent-breathe 6s ease-in-out infinite alternate}
+.piece:nth-child(3n) img{animation-delay:-2s}.piece:nth-child(3n + 1) img{animation-delay:-4s}
+.piece.lit img{filter:brightness(1.04) saturate(1.04);animation:none}
+.piece.current img{filter:brightness(1.04) saturate(1.04) drop-shadow(0 0 9px #eac5fd60)}
+@keyframes transparent-breathe{from{filter:brightness(.47) saturate(.65)}to{filter:brightness(.58) saturate(.8)}}
+@media(prefers-reduced-motion:reduce){.piece img{animation:none}}
+
+/* Compact glass display, with depth kept separate from the optional background art. */
+.slider-space{width:min(81vw,1320px)}
+.slider-frame{height:auto;aspect-ratio:4.45 / 1;background:#08040c;box-shadow:0 0 0 4px #100b15,0 0 0 5px #c5a5d26b,0 20px 85px #000a,inset 0 -22px 38px #13071dc9,inset 0 14px 25px #a679b818}
+.slider-frame::after{content:'';position:absolute;inset:0;z-index:3;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse 90% 55% at 50% 0%,#e6c6ef14,transparent 68%),radial-gradient(ellipse 55% 38% at 50% 112%,#c18ed022,transparent 70%),linear-gradient(180deg,#ffffff0b,transparent 17%,transparent 78%,#0a041aaa);box-shadow:inset 0 15px 30px #ecd0ff10,inset 0 -18px 35px #040208a0,inset 16px 0 30px #200f2e4d,inset -16px 0 30px #200f2e4d}
+.shelf-atmosphere{background:radial-gradient(ellipse at 50% 110%,#76528180,transparent 52%),radial-gradient(ellipse at 50% 14%,#47304c68,transparent 65%),radial-gradient(circle at 8% 30%,#e8ceff8a 0 1px,transparent 2px),radial-gradient(circle at 17% 70%,#ffffffa1 0 1px,transparent 2px),radial-gradient(circle at 31% 26%,#e1b4f38f 0 1px,transparent 2px),radial-gradient(circle at 43% 72%,#d3aee78f 0 1px,transparent 2px),radial-gradient(circle at 56% 19%,#ffffffad 0 1px,transparent 2px),radial-gradient(circle at 72% 74%,#eed6ffaa 0 1px,transparent 2px),radial-gradient(circle at 85% 25%,#ead5fa88 0 1px,transparent 2px),#07040b}
+.shelf{inset:0 3.5%;overflow:visible}.piece{z-index:0}.piece img{max-height:none;width:125%;max-width:none;transform:scale(1);transform-origin:center;pointer-events:none}.piece.current{z-index:2}.piece.current img{transform:scale(1.045)}
+.piece:not(.lit)::before{content:'✦';position:absolute;left:12%;top:16%;z-index:2;font-size:8px;color:#f5dcff;text-shadow:0 0 8px #e8aaff,0 0 18px #bd81df;opacity:0;pointer-events:none;animation:idle-crystal-glint 9s ease-in-out infinite;animation-delay:calc(var(--n) * -.91s)}
+.piece:not(.lit)::after{content:'·';position:absolute;right:15%;top:34%;z-index:2;color:#f8e5ff;font-size:17px;text-shadow:0 0 8px #e4a9ff;opacity:0;pointer-events:none;animation:drifting-glint 10s ease-in-out infinite;animation-delay:calc(var(--n) * -.77s)}
+.piece.lit:not(.sparkling)::after{display:none}.piece.sparkling::after{content:'✦';display:block;position:absolute;left:52%;top:19%;right:auto;z-index:3;color:#fff8ff;font-size:17px;text-shadow:0 0 6px #fff,0 0 17px #f0a4ff;pointer-events:none;animation:product-flash .8s ease-out forwards}
+@keyframes idle-crystal-glint{0%,55%,100%{opacity:0;transform:scale(.5)}62%{opacity:.75;transform:scale(1.2)}72%{opacity:0;transform:scale(.7)}}
+@keyframes drifting-glint{0%,48%,100%{opacity:0;transform:translateY(-8px)}57%{opacity:.65}70%{opacity:0;transform:translateY(12px)}}
+@keyframes product-flash{0%{opacity:0;transform:scale(.4) rotate(-15deg)}28%{opacity:1;transform:scale(1.1) rotate(0deg)}100%{opacity:0;transform:scale(.5) rotate(15deg)}}
+.sound-toggle{position:absolute;left:0;bottom:-54px;display:grid;place-items:center;width:38px;height:38px;border:1px solid #ffffff25;border-radius:50%;background:#20152882;color:#d8c6dd;cursor:pointer}.sound-toggle:hover{background:#5a3e66a0;border-color:#e5cef077}.sound-toggle:focus-visible{outline:2px solid #f4d8ff;outline-offset:4px}.sound-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.mute-mark{display:none;position:absolute;width:20px;height:1px;background:#e8cbed;transform:rotate(-48deg)}.sound-toggle.muted .mute-mark{display:block}.reset{bottom:-54px}
+@media(max-width:700px){.slider-space{width:92vw}.slider-frame{aspect-ratio:4 / 1;min-height:110px}.piece img{max-height:none;width:125%}.glass-lens{width:14%;min-width:36px}.sound-toggle,.reset{bottom:-50px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.piece.sparkling::after{display:none}}
+
+/* The illustrated midnight plaid cabinet sits behind the crystal collection. */
+.shelf-atmosphere {
+  background: #160b1b url('./images/midnight-plaid-cabinet.png') center bottom / 100% 110% no-repeat;
+}
+/* Anchor each cutout by the bottom of its visible pot, not its transparent PNG. */
+.shelf { top: 0; bottom: 0; align-items: stretch; }
+.piece { display: block; }
+.piece img, .piece.current img {
+  position: absolute; left: 50%; top: 70.3%; width: 125%; height: auto;
+  transform: translate(-50%, calc(-1 * var(--base))); transform-origin: 50% var(--base);
+}
+.piece.current img { transform: translate(-50%, calc(-1 * var(--base))) scale(1.045); }
+.piece:nth-child(1) { --base: 85.6%; }
+.piece:nth-child(2) { --base: 82.8%; }
+.piece:nth-child(3) { --base: 92.6%; }
+.piece:nth-child(4) { --base: 84.6%; }
+.piece:nth-child(5) { --base: 79.7%; }
+.piece:nth-child(6) { --base: 82.9%; }
+.piece:nth-child(7) { --base: 84.5%; }
+.piece:nth-child(8) { --base: 83.4%; }
+.piece:nth-child(9) { --base: 87.1%; }
+.contact-shadow {
+  position: absolute; z-index: 0; pointer-events: none; left: 50%; top: 70.3%;
+  width: 58%; height: 5%; transform: translate(-50%, -42%); border-radius: 50%;
+  background: radial-gradient(ellipse, #130817a8 0%, #160b1a68 45%, transparent 75%);
+  filter: blur(1px);
+}
+.piece img { z-index: 1; }
+
+/* A small winter display: product stories, snow globe, and a warm wall light. */
+.menu-header{position:absolute;top:clamp(24px,4vh,42px);left:clamp(28px,5vw,76px);right:clamp(28px,5vw,76px);display:flex;align-items:center;gap:clamp(36px,5vw,80px);z-index:8}
+.brand,.home-link{color:#efe5f2;text-decoration:none}.brand{font-size:clamp(17px,1.45vw,23px);letter-spacing:.13em;font-weight:500}.home-link{font-size:13px;color:#cbb8cf;display:flex;align-items:center;gap:9px}.home-link:hover{color:#fff}
+.slider-space{--marker-x:8.6667%;margin-top:clamp(60px,10vh,100px)}
+.display-details{height:145px;position:relative}
+.sales-marker{position:absolute;top:13px;left:var(--marker-x);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;color:#eaddec;transition:left .08s linear}.sales-number{font-family:Georgia,serif;font-size:clamp(26px,3vw,43px);line-height:1}.sales-label{font-size:9px;letter-spacing:.13em;color:#ad9aaf;white-space:nowrap}
+.product-story{position:absolute;top:69px;left:50%;width:min(72%,570px);transform:translateX(-50%);text-align:center}.product-story h1{margin:0 0 8px;font-family:Georgia,serif;font-size:clamp(19px,2vw,27px);font-weight:400;letter-spacing:.01em;color:#f3e9f2}.product-story p{margin:0;color:#bcaac0;font-size:clamp(11px,1vw,13px);line-height:1.55}
+.sound-toggle,.reset{bottom:12px}
+.theme-switch{position:absolute;right:clamp(22px,4vw,60px);bottom:clamp(22px,4vh,38px);z-index:9;padding:4px;display:flex;gap:2px;background:#1d1424;border:1px solid #e6d1ed33;border-radius:999px}.theme-switch button{cursor:pointer;border:0;border-radius:999px;padding:8px 13px;font:inherit;font-size:12px;color:#bdaec4;background:transparent}.theme-switch button[aria-pressed=true]{color:#2c2030;background:#ead8ed}.theme-switch button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.wall-lamp{position:absolute;right:clamp(55px,9vw,150px);top:0;width:80px;height:154px;z-index:2;pointer-events:none}.lamp-stem{position:absolute;top:0;left:39px;width:2px;height:36px;background:#b9976f}.lamp-shade{position:absolute;top:28px;left:22px;width:36px;height:49px;background:linear-gradient(90deg,#a78d83,#e4d2bd 35%,#d1baa9 75%,#937a74);border-radius:6px 6px 3px 3px;box-shadow:inset 0 1px #fff7,0 3px 6px #0008}.lamp-base{position:absolute;top:79px;left:19px;width:43px;height:43px;border-radius:50%;background:radial-gradient(circle at 38% 33%,#bfa477,#80664a 65%,#554132);box-shadow:0 3px 10px #0009}.lamp-glow{position:absolute;width:min(48vw,650px);height:min(60vw,650px);top:0;left:50%;transform:translate(-50%,-25%);border-radius:50%;background:radial-gradient(circle,#ffe7c166 0%,#d7b3c733 25%,#b98ec40d 50%,transparent 70%);opacity:0;transition:opacity .8s ease}
+body[data-theme=day] .lamp-glow{opacity:1}body[data-theme=day] .lamp-shade{background:linear-gradient(90deg,#e6cbb5,#fff4d8 50%,#ead1ba);box-shadow:0 0 20px #ffedc88c,0 0 50px #dfafd662}body[data-theme=day] .canvas{background:radial-gradient(ellipse 55% 65% at 82% 12%,#654359 0%,transparent 65%),radial-gradient(ellipse 54% 44% at 50% 51%,#291a32 0%,#120c19 56%,#09070c 100%)}
+.snowfall{position:absolute;inset:1%;z-index:2;overflow:hidden;border-radius:inherit;pointer-events:none}.snowfall i{position:absolute;top:-8%;left:var(--x);width:var(--size);height:var(--size);border-radius:50%;background:#fff;box-shadow:0 0 6px #eee2ff;opacity:0;animation:snowfall var(--duration) linear var(--delay) infinite}.snow-bank{position:absolute;left:13%;right:13%;bottom:1.5%;height:3.5%;z-index:2;pointer-events:none;opacity:.75;background:radial-gradient(ellipse 7% 80% at 6% 100%,#f1eaf7a8,transparent 75%),radial-gradient(ellipse 9% 75% at 21% 100%,#eee5f7a6,transparent 75%),radial-gradient(ellipse 8% 85% at 41% 100%,#f4eaf7ba,transparent 75%),radial-gradient(ellipse 10% 80% at 62% 100%,#f2e9f7a8,transparent 75%),radial-gradient(ellipse 9% 80% at 82% 100%,#f6eaf8b8,transparent 75%),radial-gradient(ellipse 7% 70% at 97% 100%,#eee5f7a6,transparent 75%)}
+@keyframes snowfall{0%{transform:translate(0,-5%);opacity:0}8%{opacity:.65}85%{opacity:.45}100%{transform:translate(20px,calc(100cqh + 10px));opacity:0}}
+.slider-frame{container-type:size}
+@media(max-width:700px){.menu-header{top:24px}.wall-lamp{right:20px;transform:scale(.75);transform-origin:top right}.slider-space{margin-top:20px}.display-details{height:160px}.product-story{width:85%;top:64px}.sound-toggle,.reset{bottom:0}.theme-switch{bottom:18px;right:18px}.sales-number{font-size:27px}.sales-label{font-size:8px}.snow-bank{bottom:2%}}
+@media(max-height:600px) and (min-width:701px){.slider-space{margin-top:40px}.display-details{height:115px}.product-story{top:54px}.sound-toggle,.reset{bottom:4px}.wall-lamp{transform:scale(.75);transform-origin:top right}}
+@media(prefers-reduced-motion:reduce){.snowfall i{animation:none;opacity:.35;top:var(--x)}.lamp-glow{transition:none}}
+
+/* Editorial title, a softly glowing wall sconce, and snow inside the glass. */
+.display-title{position:absolute;bottom:calc(100% + 20px);left:50%;transform:translateX(-50%);display:flex;align-items:baseline;justify-content:center;gap:17px;width:max-content;max-width:95%;white-space:nowrap;color:#cfb9d5}
+.display-title-script{font-family:"Apple Chancery","Snell Roundhand","Brush Script MT",cursive;font-size:clamp(20px,2.2vw,30px);font-style:italic;font-weight:400;letter-spacing:.01em;color:#e4c9e6}
+.display-title-copy{font-size:clamp(8px,.75vw,10px);letter-spacing:.22em;color:#b6a1bb}
+.sales-label{font-size:9px;letter-spacing:.1em;color:#d6c5d7}.sales-example{font-size:8px;letter-spacing:.1em;color:#9f8da5}
+.wall-lamp{top:clamp(18px,3.8vh,38px);height:125px}
+.lamp-base{top:49px;left:21px;width:40px;height:40px;background:linear-gradient(140deg,#d2b68d,#92704e 60%,#604735);border:1px solid #e7cba66b;box-shadow:0 3px 8px #0006}
+.lamp-stem{top:22px;left:39px;width:3px;height:86px;background:linear-gradient(90deg,#8f7050,#ddc094,#846344);z-index:2;border-radius:2px}
+.lamp-shade{top:5px;left:21px;width:40px;height:49px;z-index:3;border-radius:4px 4px 6px 6px;background:linear-gradient(90deg,#bca99e,#e8ddd3 45%,#cbb6aa);box-shadow:0 3px 5px #10071288}
+.lamp-glow{top:58px;left:50%;height:min(54vw,620px);width:min(46vw,580px);transform:translate(-50%,0);background:radial-gradient(ellipse at 50% 0%,#ffe9c85c, #d8acc326 30%,transparent 68%)}
+.lamp-beam{position:absolute;z-index:-1;top:49px;left:50%;width:min(40vw,500px);height:min(50vw,520px);transform:translateX(-50%);clip-path:polygon(47% 0,53% 0,100% 100%,0 100%);background:radial-gradient(ellipse at 50% 0%,#fce2bc55 0%,#d6abc726 32%,transparent 72%);filter:blur(14px);opacity:0;transition:opacity .8s}
+.lamp-sparkles{position:absolute;top:85px;left:0;width:80px;height:220px;opacity:0;transition:opacity .8s}.lamp-sparkles i{position:absolute;width:3px;height:3px;border-radius:50%;background:#ffe9d4;box-shadow:0 0 7px #fff4d6;animation:lampspark 4.5s ease-in-out infinite}.lamp-sparkles i:nth-child(1){left:12%;top:20%;animation-delay:-1s}.lamp-sparkles i:nth-child(2){left:74%;top:37%;animation-delay:-3s}.lamp-sparkles i:nth-child(3){left:35%;top:65%;animation-delay:-2s}.lamp-sparkles i:nth-child(4){left:94%;top:80%;animation-delay:-4s}.lamp-sparkles i:nth-child(5){left:-8%;top:52%;animation-delay:-.4s}
+body[data-theme=day] .lamp-beam,body[data-theme=day] .lamp-sparkles{opacity:1}
+@keyframes lampspark{0%,100%{opacity:.15;transform:scale(.65) translateY(0)}50%{opacity:.8;transform:scale(1.2) translateY(5px)}}
+.snow-bank{left:10%;right:10%;bottom:1.8%;height:4.5%;opacity:.9;z-index:3;animation:snow-soft-glimmer 8s ease-in-out infinite alternate}
+.snow-bank::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 7% 50% at 5% 100%,#fff7ffe0,transparent 76%),radial-gradient(ellipse 8% 45% at 23% 100%,#fff7ffd1,transparent 76%),radial-gradient(ellipse 8% 45% at 48% 100%,#fff7ffd5,transparent 76%),radial-gradient(ellipse 8% 50% at 75% 100%,#fff7ffd1,transparent 76%),radial-gradient(ellipse 6% 50% at 95% 100%,#fff7ffe0,transparent 76%)}
+@keyframes snow-soft-glimmer{from{opacity:.65}to{opacity:.95}}
+@media(max-width:700px){.display-title{bottom:calc(100% + 14px);gap:8px}.display-title-script{font-size:18px}.display-title-copy{font-size:7px;letter-spacing:.1em}.wall-lamp{top:14px;right:16px}.sales-label,.sales-example{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.lamp-sparkles i,.snow-bank{animation:none}.lamp-beam,.lamp-sparkles{transition:none}}
+/* Feather the light into the wall without a visible circular or angular edge. */
+.lamp-glow{border-radius:0;background:radial-gradient(ellipse at 50% 0%,#ffe9c84d 0%,#d8acc320 29%,transparent 66%)}
+.lamp-beam{clip-path:none;background:radial-gradient(ellipse 38% 75% at 50% 0%,#fce2bc50 0%,#d6abc71e 42%,transparent 78%);filter:blur(20px)}
+.lamp-glow,.lamp-beam{-webkit-mask-image:linear-gradient(to bottom,transparent,#000 14%,#000 65%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 14%,#000 65%,transparent)}
+
+/* A vintage petal sconce; light remains independent of the transparent art. */
+.wall-lamp{top:clamp(18px,3vh,30px);right:clamp(38px,6vw,95px);width:clamp(118px,11vw,164px);height:clamp(110px,10vw,150px)}
+.lamp-image{position:relative;z-index:3;display:block;width:100%;height:auto;filter:brightness(.75) saturate(.82) drop-shadow(0 4px 6px #0007);transition:filter .8s ease}
+body[data-theme=day] .lamp-image{filter:brightness(1.1) saturate(1.02) drop-shadow(0 0 10px #ffe3c988)}
+.lamp-glow,.lamp-beam{left:38%;top:66%}
+.lamp-sparkles{left:calc(38% - 40px);top:72%}
+@media(max-width:700px){.wall-lamp{width:110px;top:13px;right:20px;transform:none}.lamp-glow{width:270px;height:310px}.lamp-beam{width:270px;height:310px}}
+@media(prefers-reduced-motion:reduce){.lamp-image{transition:none}}
+
+/* Handwritten brand and clear, separate vertical bands for sales and stories. */
+.menu-header{gap:clamp(22px,3vw,46px)}
+.brand{position:relative;display:inline-flex;align-items:flex-start;color:#ebd2ec;text-decoration:none;letter-spacing:0;font-weight:400;isolation:isolate}
+.brand-word{font-family:"Snell Roundhand","Apple Chancery","Brush Script MT",cursive;font-size:clamp(28px,3vw,42px);font-style:italic;line-height:1.1;letter-spacing:.015em;text-shadow:0 0 20px #c58ddd35;transform:rotate(-3deg)}
+.brand-dash{display:inline-block;margin:0 .025em;color:#d8a9e0}
+.brand-spark{font-size:12px;line-height:1;color:#e9c5ef;transform:translate(4px,-2px);text-shadow:0 0 10px #d59bf3}
+.brand::after{content:"";position:absolute;z-index:-1;bottom:-5px;left:3%;width:90%;height:7px;border-bottom:1px solid #d5a8e67a;border-radius:50%;transform:rotate(-3deg)}
+.home-link{font-size:12px;letter-spacing:.04em;gap:7px;padding:8px 12px;border:1px solid #dec1e522;border-radius:999px;background:#25172d44;transition:background .2s,border-color .2s,color .2s}
+.home-link:hover{background:#46304c88;border-color:#e4c6ed88}.home-link:focus-visible,.brand:focus-visible{outline:2px solid #f4d8ff;outline-offset:5px}
+.home-arrow{font-size:15px;line-height:1}
+.display-details{height:210px}
+.product-story{top:112px}
+.sound-toggle,.reset{bottom:7px}
+@media(max-width:700px){.menu-header{gap:16px}.brand-word{font-size:28px}.brand-spark{font-size:10px}.home-link{padding:6px 9px;font-size:11px}.display-details{height:215px}.product-story{top:103px;width:calc(100% - 100px)}.sound-toggle,.reset{bottom:4px}.canvas{min-height:max(100dvh,620px)}}
+@media(max-height:600px) and (min-width:701px){.canvas{min-height:620px}.display-details{height:200px}.product-story{top:105px}.sound-toggle,.reset{bottom:5px}}
+
+/* A floating violet heart marks the two highest-selling example products. */
+.hot-heart{position:absolute;z-index:5;left:50%;top:7%;font-family:"Apple Color Emoji","Segoe UI Emoji",sans-serif;font-size:clamp(17px,2.2vw,31px);line-height:1;opacity:0;pointer-events:none;transform:translate(-50%,12px) scale(.4);filter:drop-shadow(0 3px 7px #be79edaa);transition:opacity .3s ease,transform .3s ease;backface-visibility:visible}
+.bestseller.current .hot-heart{opacity:1;animation:heart-arrive .48s cubic-bezier(.2,.9,.28,1.35) both,heart-float-spin 4s ease-in-out .48s infinite}
+@keyframes heart-arrive{from{opacity:0;transform:translate(-50%,16px) scale(.3) rotate(-18deg)}to{opacity:1;transform:translate(-50%,0) scale(1) rotate(0)}}
+@keyframes heart-float-spin{0%,100%{transform:translate(-50%,0) perspective(220px) rotateY(-18deg) rotate(-5deg)}50%{transform:translate(-50%,-6px) perspective(220px) rotateY(28deg) rotate(6deg)}}
+@media(prefers-reduced-motion:reduce){.bestseller.current .hot-heart{animation:none;opacity:1;transform:translate(-50%,0) scale(1)}}
+
+/* A quiet, unlit cabinet at opening; the glass reveals light from left to right. */
+.slider-frame { --lit-edge: 0%; }
+.shelf-dim {
+  --light-feather: clamp(95px, 14vw, 220px);
+  position:absolute; z-index:1; top:0; bottom:0;
+  left:calc(-1 * var(--light-feather)); width:calc(100% + var(--light-feather));
+  pointer-events:none;
+  background:linear-gradient(to right, transparent 0, rgba(8,3,13,.05) calc(var(--light-feather) * .18), rgba(8,3,13,.26) calc(var(--light-feather) * .43), rgba(8,3,13,.58) calc(var(--light-feather) * .72), rgba(8,3,13,.78) var(--light-feather));
+  transform:translateX(var(--lit-edge)); transition:transform .55s ease-out;
+}
+.slider-frame.dragging .shelf-dim { transition:transform .12s linear; }
+.piece.current:not(.lit) img { filter:brightness(.46) saturate(.72); animation:transparent-breathe 6s ease-in-out infinite alternate; }
+
+/* A few quiet shooting stars drift across the upper night sky. */
+.night-sky{position:absolute;inset:0 0 auto;height:min(42vh,360px);overflow:hidden;pointer-events:none;z-index:0}
+.night-sky i{position:absolute;top:-14px;left:var(--star-x);width:3px;height:3px;border-radius:50%;opacity:0;background:#fff6ff;box-shadow:0 0 5px #f7d8ff,0 0 12px #c48be3;animation:starfall var(--star-duration) ease-in var(--star-delay) infinite}
+.night-sky i::before{content:"";position:absolute;width:2px;height:27px;bottom:0;left:.5px;transform-origin:bottom;transform:rotate(-23deg);background:linear-gradient(to top,#f9dcff99,transparent);filter:blur(.5px)}
+.night-sky i:nth-child(1){--star-x:26%;--star-duration:19s;--star-delay:-3s}
+.night-sky i:nth-child(2){--star-x:47%;--star-duration:25s;--star-delay:-12s}
+.night-sky i:nth-child(3){--star-x:67%;--star-duration:23s;--star-delay:-17s}
+.night-sky i:nth-child(4){--star-x:83%;--star-duration:29s;--star-delay:-8s}
+@keyframes starfall{0%,8%{opacity:0;transform:translate(0,0) scale(.5)}10%{opacity:.8}18%{opacity:.55}22%,100%{opacity:0;transform:translate(34px,min(26vh,210px)) scale(.5)}}
+@media(prefers-reduced-motion:reduce){.night-sky i{animation:none;opacity:0}}

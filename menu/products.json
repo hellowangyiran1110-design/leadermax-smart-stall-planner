@@ -1,0 +1,11 @@
+[
+  {"name":"Moonlit Clarity","meaning":"A quiet garden of white quartz, inspired by fresh beginnings and a little space to breathe.","simulatedSold":24,"image":"01-white-quartz-pedestal.png"},
+  {"name":"Golden Hour Grove","meaning":"Amber tones and warm wood bring to mind the comfort of a slow, golden afternoon.","simulatedSold":18,"image":"02-golden-quartz-wood-bowl.png"},
+  {"name":"Rosewater Haven","meaning":"Soft rose and mineral blue sit together like a peaceful moment in a secret garden.","simulatedSold":13,"image":"03-mint-rose-stone-bowl.png"},
+  {"name":"Blush of Dawn","meaning":"Rose-toned crystals and delicate flowers celebrate care, kindness and the beauty of beginning again.","simulatedSold":21,"image":"04-rose-quartz-pedestal.png"},
+  {"name":"Sunlit Stillness","meaning":"Clear and champagne-coloured crystals capture the feeling of sunshine on a quiet morning.","simulatedSold":17,"image":"05-white-citrine-pedestal.png"},
+  {"name":"Lavender Reverie","meaning":"An amethyst garden in soft lavender hues, made for dreamy evenings and peaceful thoughts.","simulatedSold":28,"image":"06-amethyst-lavender-bowl.png"},
+  {"name":"Wildflower Ember","meaning":"A smoky crystal and golden flower meet in a vintage cup, a little reminder to stay grounded.","simulatedSold":12,"image":"07-smoky-quartz-floral-cup.png"},
+  {"name":"Petal & Promise","meaning":"Pink crystal points and tiny blossoms tell a story of hope, possibility and gentle change.","simulatedSold":16,"image":"08-rose-quartz-floral-cup.png"},
+  {"name":"Featherlight Wish","meaning":"A pink plume and rose-coloured stones make a whimsical home for your smallest wishes.","simulatedSold":19,"image":"09-pink-lavender-stone-bowl.png"}
+]
